@@ -1,0 +1,52 @@
+{
+  "name": "pocap",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-pod": "cds watch --open pod/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-vnd": "cds watch --open vnd/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-mmd": "cds watch --open mmd/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-inv": "cds watch --open inv/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-invh": "cds watch --open invh/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-gcr": "cds watch --open gcr/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-aud": "cds watch --open aud/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-auds": "cds watch --open auds/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/pod",
+    "app/vnd",
+    "app/mmd",
+    "app/inv",
+    "app/invh",
+    "app/gcr",
+    "app/aud",
+    "app/aud",
+    "app/auds"
+  ],
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite"
+      },
+      "[production]": {
+        "db": {
+          "kind": "hana"
+        }
+      }
+    }
+  }
+}
