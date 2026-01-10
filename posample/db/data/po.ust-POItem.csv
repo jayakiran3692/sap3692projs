@@ -1,0 +1,11 @@
+ID,poHeader_ID,lineItemNo,material,description,orderedQty,uom,netPrice,discountPct,gstPct,lineItemNetValue,receivedQty,openQty,status,internalRemarks,createdAt,createdBy,modifiedAt,modifiedBy
+501,101,10,MAT1001,Steel Bolts M8,500,Ea,1.80,5,12,855.36,0,500,Open,,2025-02-11T08:45:12Z,system,2025-02-11T08:45:12Z,system
+502,101,20,MAT2007,Aluminum Sheet 2mm,200,Kg,35.00,0,12,7840.00,0,200,Open,,2025-02-11T08:45:12Z,system,2025-02-11T08:45:12Z,system
+
+503,102,10,MAT5010,Industrial Pump Type A,2,Ea,15000.00,10,5,28500.00,1,1,Partially Received,Second unit in transit,2025-02-11T09:05:22Z,john.d,2025-02-11T12:33:48Z,john.d
+504,102,20,MAT7002,Spare Seals Pack,10,Set,120.00,0,5,1260.00,0,10,Open,,2025-02-11T09:05:22Z,john.d,2025-02-11T12:33:48Z,john.d
+
+505,103,10,MAT3300,Wiring Cable 10m,120,Rol,350.00,5,18,47388.00,120,0,Closed,,2025-02-11T10:12:01Z,anita.s,2025-02-11T10:45:40Z,anita.s
+506,103,20,MAT8811,Control Panel Box,8,Ea,18000.00,2,18,169920.00,0,8,Approved,Awaiting fabrication,2025-02-11T10:12:01Z,anita.s,2025-02-11T10:45:40Z,anita.s
+
+507,104,10,MAT9900,Packaging Cartons,100,Box,30.00,0,8,3240.00,100,0,Closed,,2025-02-11T11:20:47Z,system,2025-02-11T11:20:47Z,system

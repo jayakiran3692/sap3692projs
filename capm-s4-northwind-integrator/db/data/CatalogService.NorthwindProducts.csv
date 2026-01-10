@@ -1,0 +1,6 @@
+ProductID,ProductName,QuantityPerUnit,UnitPrice,UnitsInStock
+P-1001,Contoso Laptop 14,4 pcs,783.19,308
+P-1002,Contoso Laptop 16,1 pcs,295.27,496
+P-2001,Fabrikam Mouse,10 pcs,330.25,0
+P-2002,Fabrikam Keyboard,4 pcs,329.35,33
+P-3001,Northwind Monitor 27,1 pcs,380.90,50

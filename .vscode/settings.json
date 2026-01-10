@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "JK Industries",
+            "database": "${workspaceFolder:projects}/UST2/db.sqlite"
+        }
+    ]
+}

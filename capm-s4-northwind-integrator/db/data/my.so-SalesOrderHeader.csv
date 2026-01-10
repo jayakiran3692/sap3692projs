@@ -1,0 +1,6 @@
+SalesOrderID,ID,CustomerName,OrderDate,TotalAmount,createdAt,createdBy,modifiedAt,modifiedBy
+SO20250001,HDR-0001,Apex Retail Pvt Ltd,2025-12-09 12:05:03,6131.15,2025-12-09 09:20:03,rajesh.singh,2025-12-09 15:20:03,order.bot
+SO20250002,HDR-0002,BlueSky Electronics,2025-12-01 23:05:03,42790.53,2025-12-01 20:17:03,system,2025-12-03 04:17:03,order.bot
+SO20250003,HDR-0003,Sunrise Traders,2025-12-04 10:05:03,22534.67,2025-12-04 09:41:03,maqsood.a,2025-12-06 04:41:03,order.bot
+SO20250004,HDR-0004,Neon Tech Solutions,2025-12-03 10:05:03,35988.38,2025-12-03 09:33:03,maqsood.a,2025-12-04 23:33:03,rajesh.singh
+SO20250005,HDR-0005,Harbor Foods,2025-12-10 20:05:03,46279.04,2025-12-10 19:20:03,maqsood.a,2025-12-11 07:20:03,csr.agent

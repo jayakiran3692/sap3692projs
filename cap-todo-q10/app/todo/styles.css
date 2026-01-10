@@ -1,0 +1,281 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    system-ui, -system-ui, "Segoe UI", sans-serif;
+  color-scheme: light dark;
+  --bg: #f5f5f7;
+  --card-bg: #ffffff;
+  --border: #e2e2e7;
+  --text: #111111;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  --accent-soft: rgba(0, 113, 227, 0.08);
+  --danger: #ff3b30;
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.06);
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.app {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #ffffff 0, #f0f0f5 40%, #e5e5ee 100%);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.layout {
+  width: 100%;
+  max-width: 980px;
+  padding: 32px 20px 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  padding: 18px 20px 20px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(18px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Form */
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 140ms ease, box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.input::placeholder {
+  color: #b0b0b5;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  background-color: #ffffff;
+}
+
+/* Buttons */
+
+.btn {
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 140ms ease, box-shadow 140ms ease,
+    transform 80ms ease, opacity 140ms ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0071e3, #0a84ff);
+  box-shadow: 0 10px 20px rgba(0, 113, 227, 0.25);
+}
+
+.btn.primary:hover {
+  box-shadow: 0 14px 32px rgba(0, 113, 227, 0.35);
+}
+
+.btn.subtle {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--text);
+}
+
+.btn.subtle:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.btn.ghost {
+  background: transparent;
+  border-radius: 999px;
+  padding-inline: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.btn.ghost:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.btn.danger {
+  background-color: rgba(255, 59, 48, 0.1);
+  color: var(--danger);
+}
+
+.btn.danger:hover {
+  background-color: rgba(255, 59, 48, 0.18);
+}
+
+/* Table */
+
+.table-wrapper {
+  max-height: 420px;
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table thead {
+  background: linear-gradient(to bottom, #fafafa, #f5f5f7);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table th,
+.table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.table th {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Status styles */
+
+.table td:nth-child(2) {
+  width: 95px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.badge.done {
+  background-color: rgba(52, 199, 89, 0.1);
+  color: #34c759;
+}
+
+.badge.pending {
+  background-color: rgba(255, 149, 0, 0.08);
+  color: #ff9500;
+}
+
+/* Actions column */
+
+.table td:last-child {
+  width: 180px;
+  text-align: right;
+}
+
+.table td:last-child .btn {
+  margin-left: 4px;
+}
+
+/* Small screens */
+
+@media (max-width: 720px) {
+  .layout {
+    padding-inline: 14px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table-wrapper {
+    border-radius: 10px;
+  }
+
+  .table td:last-child {
+    width: 160px;
+  }
+}

@@ -1,0 +1,5 @@
+ID,poNumber,vendor,companyCode,purchasingOrg,currency,documentDate,deliveryDate,paymentTerms,totalPOValue,status,remarks,createdAt,createdBy,modifiedAt,modifiedBy
+101,PO-20250211-001,SUPP001,1000,US01,USD,2025-02-11,2025-02-20,NET30,15800.00,Open,,2025-02-11T08:45:12Z,system,2025-02-11T08:45:12Z,system
+102,PO-20250211-002,SUPP014,1000,US01,EUR,2025-02-11,2025-02-28,NET45,32000.50,Partially Received,Waiting for next shipment,2025-02-11T09:05:22Z,john.d,2025-02-11T12:33:48Z,john.d
+103,PO-20250211-003,SUPP008,2000,IN02,INR,2025-02-11,2025-03-05,IMMEDIATE,450000.00,Approved,QC review complete,2025-02-11T10:12:01Z,anita.s,2025-02-11T10:45:40Z,anita.s
+104,PO-20250211-004,SUPP022,3000,SG01,SGD,2025-02-11,2025-02-25,NET15,7800.00,Closed,Delivered in full,2025-02-11T11:20:47Z,system,2025-02-11T11:20:47Z,system

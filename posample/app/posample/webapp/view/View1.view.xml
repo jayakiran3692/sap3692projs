@@ -1,0 +1,70 @@
+<mvc:View
+    controllerName="com.ust.po.posample.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" title="{i18n>appTitle}">
+        <content>
+            <Panel
+                id="_IDGenPanel"
+                headerText="Purchase Orders"
+                expandable="true"
+                expanded="true">
+
+                <content>
+                    <Table
+                        id="poTable"
+                        inset="false"
+                        mode="SingleSelectMaster"
+                        includeItemInSelection="true"
+                        itemPress="onPOPress"
+                        items="{
+                            path: '/POHeaders'
+                        }">
+
+                        <headerToolbar>
+                            <Toolbar>
+                                <Title text="Purchase Orders" level="H2" />
+                                <ToolbarSpacer />
+                                <SearchField
+                                    id="searchField"
+                                    width="14rem"
+                                    placeholder="Search PO / Vendor"
+                                    liveChange="onSearch" />
+                            </Toolbar>
+                        </headerToolbar>
+
+                        <columns>
+                            <Column><Text text="PO Number" /></Column>
+                            <Column><Text text="Vendor" /></Column>
+                            <Column><Text text="Company Code" /></Column>
+                            <Column><Text text="Purch. Org" /></Column>
+                            <Column><Text text="Currency" /></Column>
+                            <Column><Text text="Doc Date" /></Column>
+                            <Column><Text text="Deliv. Date" /></Column>
+                            <Column hAlign="End"><Text text="Total Value" /></Column>
+                            <Column><Text text="Status" /></Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem type="Navigation">
+                                <cells>
+                                    <Text text="{poNumber}" />
+                                    <Text text="{vendor}" />
+                                    <Text text="{companyCode}" />
+                                    <Text text="{purchasingOrg}" />
+                                    <Text text="{currency}" />
+                                    <Text text="{documentDate}" />
+                                    <Text text="{deliveryDate}" />
+                                    <ObjectNumber number="{totalPOValue}" unit="{currency}" />
+                                    <ObjectStatus text="{status}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+
+                    </Table>
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

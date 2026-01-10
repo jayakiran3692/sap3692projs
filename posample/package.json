@@ -1,0 +1,25 @@
+{
+  "name": "posample",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "18": "^0.0.0",
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9.5.0",
+    "cds-plugin-ui5": "^0.13.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-posample": "cds watch --open com.ust.po.posample/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "cds": {}
+}

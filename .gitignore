@@ -5,4 +5,4 @@ target/
 .env
 .vscode/settings.json
 dist/
-EOF
+EOF.vscode/launch.json

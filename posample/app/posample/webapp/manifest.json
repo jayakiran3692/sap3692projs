@@ -1,0 +1,96 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "com.ust.po.posample",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/po/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5"
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.76.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "rootView": {
+      "viewName": "com.ust.po.posample.view.App",
+      "type": "XML",
+      "id": "App"
+    },
+    "models": {
+      "": {
+        "type": "sap.ui.model.odata.v4.ODataModel",
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "groupId": "$auto",
+          "updateGroupId": "$auto"
+        }
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.ust.po.posample.i18n.i18n"
+        }
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.ust.po.posample.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "View1",
+          "target": "View1"
+        },
+        {
+          "pattern": "detail/{path*}",
+          "name": "Detail",
+          "target": "Detail"
+        }
+      ],
+      "targets": {
+        "View1": {
+          "viewName": "View1",
+          "viewLevel": 1
+        },
+        "Detail": {
+          "viewName": "Detail",
+          "viewLevel": 2
+        }
+      }
+    }
+  }
+}

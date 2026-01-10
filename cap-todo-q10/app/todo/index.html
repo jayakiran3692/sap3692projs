@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CAP To-Do Q10</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app">
+  <div class="layout">
+    <header class="header">
+      <div>
+        <h1 class="title">To-Do</h1>
+        <p class="subtitle">CAP · SQLite · JavaScript</p>
+      </div>
+      <button id="mark-all" class="btn subtle">Mark all done</button>
+    </header>
+
+    <section class="card">
+      <form id="task-form" class="task-form">
+        <input
+          id="title"
+          class="input"
+          placeholder="What do you want to get done?"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn primary">Add task</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2 class="card-title">Tasks</h2>
+      </div>
+      <div class="table-wrapper">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Status</th>
+              <th>Created</th>
+              <th>Days old</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="task-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="ui.js"></script>
+</body>
+</html>

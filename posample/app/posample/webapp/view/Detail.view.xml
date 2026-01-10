@@ -1,0 +1,68 @@
+<mvc:View
+    controllerName="com.ust.po.posample.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page
+        id="detailPage"
+        title="PO Detail"
+        showNavButton="true"
+        navButtonPress="onNavBack">
+
+        <content>
+            <!-- Header for selected POHeader -->
+            <ObjectHeader
+                title="{poNumber}"
+                number="{totalPOValue}"
+                numberUnit="{currency}">
+                <attributes>
+                    <ObjectAttribute title="Vendor" text="{vendor}" />
+                    <ObjectAttribute title="Company Code" text="{companyCode}" />
+                    <ObjectAttribute title="Purchasing Org" text="{purchasingOrg}" />
+                    <ObjectAttribute title="Status" text="{status}" />
+                    <ObjectAttribute title="Document Date" text="{documentDate}" />
+                    <ObjectAttribute title="Delivery Date" text="{deliveryDate}" />
+                </attributes>
+            </ObjectHeader>
+
+            <!-- Items of this POHeader via navigation POItems -->
+            <Panel
+                headerText="Items"
+                expandable="true"
+                expanded="true"
+                class="sapUiMediumMarginTop">
+
+                <content>
+                    <Table
+                        id="itemsTable"
+                        items="{ path: 'POItems' }">
+
+                        <columns>
+                            <Column><Text text="Item" /></Column>
+                            <Column><Text text="Material" /></Column>
+                            <Column><Text text="Description" /></Column>
+                            <Column hAlign="End"><Text text="Qty" /></Column>
+                            <Column><Text text="UoM" /></Column>
+                            <Column hAlign="End"><Text text="Net Price" /></Column>
+                            <Column hAlign="End"><Text text="Line Value" /></Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{lineItemNo}" />
+                                    <Text text="{material}" />
+                                    <Text text="{description}" />
+                                    <Text text="{orderedQty}" />
+                                    <Text text="{uom}" />
+                                    <Text text="{netPrice}" />
+                                    <Text text="{lineItemNetValue}" />
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
