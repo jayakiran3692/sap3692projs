@@ -1,0 +1,14 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="fdeloy.controller.View1">
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <FlexBox width="100%" id="box0">
+            <items>
+                <ToggleButton xmlns="sap.m" text="Toggle Button" id="button0"/>
+            </items>
+        </FlexBox>
+    </content>
+    <headerContent>
+        <PullToRefresh id="refresh0"/>
+    </headerContent>
+    </Page>
+</mvc:View>

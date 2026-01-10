@@ -1,0 +1,8 @@
+cat <<EOF > .gitignore
+node_modules/
+gen/
+target/
+.env
+.vscode/settings.json
+dist/
+EOF
